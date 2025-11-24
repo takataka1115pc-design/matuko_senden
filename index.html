@@ -33,10 +33,6 @@
         .font-pop {
             font-family: 'Zen Maru Gothic', sans-serif;
         }
-        /* 以前のグラデーション背景は削除 */
-        /* .bg-sunset {
-            background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 50%, #ea580c 100%);
-        } */
         .text-shadow-glow {
             /* 黄色からオレンジ色へ変更 */
             text-shadow: 0 0 20px rgba(251, 146, 60, 0.6);
@@ -70,89 +66,78 @@
 </head>
 <body class="text-white min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
 
-    <!-- Background Elements (Abstract Speaker Tower vibe) -> 削除 -->
-    <!--
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none opacity-20">
-        <div class="absolute -top-20 -left-20 w-96 h-96 bg-orange-500 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-600 rounded-full blur-3xl"></div>
-    </div>
-    -->
-
     <!-- Main Content Container -->
     <main class="relative z-10 w-full max-w-4xl px-4 py-12 flex flex-col items-center space-y-8">
         
-        <!-- Header / Label -> 黄色からオレンジ色へ変更 -->
+        <!-- Header / Label -->
         <div class="bg-orange-500 text-white font-bold px-6 py-1 rounded-full text-sm md:text-base tracking-widest uppercase shadow-lg animate-bounce">
             On Air Info
         </div>
 
         <!-- Main Heading Area -->
-        <div class="text-center space-y-4">
-            <!-- 黄色からオレンジ色へ変更 -->
-            <h2 class="text-lg md:text-2xl font-bold text-orange-200 tracking-wide">
-                あの「マツコの知らない世界」に<br class="md:hidden"/>出演決定！
-            </h2>
+        <div class="text-center space-y-2">
+            <!-- 上部のテキストを強調 -->
+            <div class="font-bold tracking-wide leading-relaxed">
+                <span class="block text-white text-base md:text-xl mb-1">あの人気番組</span>
+                <span class="block text-2xl md:text-4xl text-yellow-300 font-black text-shadow-glow">
+                    「マツコの知らない世界」に<br class="md:hidden"/>出演決定！
+                </span>
+            </div>
             
-            <div class="py-4 relative">
-                <!-- Decorative Icon Left -> 黄色からオレンジ色へ変更 -->
-                <svg class="w-12 h-12 md:w-16 md:h-16 absolute -left-4 md:-left-16 top-1/2 -translate-y-1/2 text-orange-400 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                </svg>
+            <div class="py-2 relative flex items-center justify-center">
+                <!-- Left Speaker Removed -->
 
-                <!-- タイトルのグラデーションを黄色からオレンジ色へ変更 -->
-                <h1 class="font-pop text-4xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-white to-orange-300 text-shadow-glow leading-tight">
+                <!-- タイトル -->
+                <h1 class="font-pop text-4xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-white to-orange-300 text-shadow-glow leading-tight z-10">
                     防災無線<br class="md:hidden"/>チャイムの世界
                 </h1>
 
-                <!-- Decorative Icon Right -> 黄色からオレンジ色へ変更 -->
-                <svg class="w-12 h-12 md:w-16 md:h-16 absolute -right-4 md:-right-16 top-1/2 -translate-y-1/2 text-orange-400 opacity-80 speaker-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Decorative Icon Right (Keep) -->
+                <svg class="w-10 h-10 md:w-16 md:h-16 absolute -right-2 md:-right-12 top-1/2 -translate-y-1/2 text-orange-400 opacity-80 speaker-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                     <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
                     <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
                 </svg>
             </div>
             
-            <p class="text-gray-200 text-sm md:text-lg max-w-lg mx-auto leading-relaxed">
+            <p class="text-gray-200 text-sm md:text-lg max-w-lg mx-auto leading-relaxed pt-2">
                 夕暮れの街に響くあのメロディ。<br>
                 知られざる音色の魅力と奥深い世界をマツコさんに熱弁！
             </p>
         </div>
 
-        <!-- Date & Time Card (Modified: No line breaks, single line layout) -->
-        <!-- 背景色の透明度を調整し、枠線の色を変更 -->
-        <div class="w-full max-w-4xl bg-black/30 backdrop-blur-md border border-orange-500/30 rounded-2xl p-4 md:p-8 text-center shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+        <!-- Date & Time Card -->
+        <div class="w-full max-w-3xl bg-black/30 backdrop-blur-md border border-orange-500/30 rounded-2xl p-4 md:p-6 text-center shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
             <!-- flex-row and flex-nowrap to prevent line breaks -->
-            <div class="flex flex-row flex-nowrap justify-center items-center gap-2 md:gap-6 whitespace-nowrap">
+            <div class="flex flex-row flex-nowrap justify-center items-center gap-3 md:gap-8 whitespace-nowrap">
                 
                 <!-- Date -->
                 <div class="text-sm sm:text-xl md:text-4xl font-black text-white">
                     11月25日
                 </div>
                 
-                <!-- Day -> 黄色からオレンジ色へ変更 -->
+                <!-- Day -->
                 <div class="text-sm sm:text-xl md:text-4xl font-black text-orange-400">
                     火曜日
                 </div>
 
-                <!-- Station -->
-                <div class="text-sm sm:text-xl md:text-3xl font-bold text-white border-l border-white/30 pl-2 md:pl-6">
-                    マツコの知らない世界
+                <!-- Time (Changed to include "放送") -->
+                <div class="text-sm sm:text-xl md:text-4xl font-black text-white">
+                    20:55 <span class="text-xs md:text-2xl font-bold ml-1">放送</span>
                 </div>
             </div>
         </div>
 
         <!-- Video Section -->
         <div class="w-full max-w-3xl space-y-4">
-            <!-- 黄色からオレンジ色へ変更 -->
             <div class="flex items-center space-x-2 text-orange-300 font-bold text-lg md:text-xl">
                 <svg class="w-6 h-6 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>
                 <span>予告動画をチェック！</span>
             </div>
             
-            <div class="aspect-w-16 aspect-h-9 w-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/10 bg-black">
+            <div class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/10 bg-black">
                 <iframe 
-                    class="w-full h-full object-cover"
+                    class="w-full h-full"
                     src="https://www.youtube.com/embed/MvVjqLeYNfk?start=12" 
                     title="YouTube video player" 
                     frameborder="0" 
@@ -163,7 +148,7 @@
             <p class="text-center text-gray-400 text-xs md:text-sm">※動画は12秒付近から始まります</p>
         </div>
 
-        <!-- CTA Button -> 赤色は夕焼けと相性が良いので維持 -->
+        <!-- CTA Button -->
         <div class="pt-6">
             <a href="https://www.tbs.co.jp/matsuko-sekai/" target="_blank" class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-red-600 font-pop rounded-full hover:bg-red-700 hover:scale-105 hover:shadow-[0_0_30px_rgba(220,38,38,0.6)] focus:outline-none ring-offset-2 focus:ring-2 ring-red-400">
                 <span class="absolute w-full h-full rounded-full opacity-0 group-hover:animate-ping bg-red-600"></span>
